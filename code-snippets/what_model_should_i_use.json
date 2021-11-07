@@ -1,0 +1,19 @@
+{
+  "display_name": "What model should I use?",
+  "metadata": {
+    "code": [
+      "from IPython.display import Image ",
+      "import os",
+      "",
+      "path = os.path.abspath(\"Pictures/ml_map.png\")",
+      "",
+      "Image(f\"{path}\")"
+    ],
+    "tags": [
+      "image",
+      "model"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

@@ -1,0 +1,28 @@
+{
+  "display_name": "Grid Search",
+  "metadata": {
+    "code": [
+      "from sklearn.model_selection import GridSearchCV, RandomizedSearchCV",
+      "",
+      "pipe.get_params()",
+      "",
+      "",
+      "grid = {'model__C':[0.01,0.1,1,10], 'model__kernel':['rbf','sigmoid','poly']}",
+      "",
+      "search = RandomizedSearchCV(pipe, ",
+      "                            grid, ",
+      "                            scoring='accuracy',",
+      "                            n_iter=100, # number of draws",
+      "                            cv=5, ",
+      "                            n_jobs=-1)",
+      "",
+      "search.best_params_",
+      "search.best_estimator_"
+    ],
+    "tags": [
+      "ML"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

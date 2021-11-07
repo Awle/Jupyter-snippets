@@ -1,0 +1,15 @@
+{
+  "display_name": "Confusion Matrix",
+  "metadata": {
+    "code": [
+      "results_df = pd.DataFrame({'actual': y_test,'predicted': y_pred})",
+      "confusion_matrix = pd.crosstab(index= results_df['actual'],columns = results_df['predicted'])]"
+    ],
+    "language": "Python",
+    "tags": [
+      "confusion",
+      "classification"
+    ]
+  },
+  "schema_name": "code-snippet"
+}

@@ -1,0 +1,19 @@
+{
+  "display_name": "NLP Import",
+  "metadata": {
+    "code": [
+      "import string ",
+      "from nltk.corpus import stopwords ",
+      "from nltk.tokenize import word_tokenize",
+      "from nltk.stem import WordNetLemmatizer",
+      "from sklearn.naive_bayes import MultinomialNB",
+      "from sklearn.decomposition import LatentDirichletAllocation"
+    ],
+    "tags": [
+      "NLP",
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

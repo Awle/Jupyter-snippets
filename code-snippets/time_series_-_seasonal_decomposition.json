@@ -1,0 +1,22 @@
+{
+  "display_name": "Time Series - Seasonal Decomposition",
+  "metadata": {
+    "code": [
+      "from statsmodels.tsa.seasonal import seasonal_decompose",
+      "",
+      "sd = seasonal_decompose(data[''],model='additive')",
+      "sd.plot();",
+      "",
+      "#De-seasonalize",
+      "data[''] = data.Sales/sd.seasonal"
+    ],
+    "tags": [
+      "time series",
+      "seasonal",
+      "decomposition",
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

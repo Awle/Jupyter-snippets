@@ -1,0 +1,25 @@
+{
+  "display_name": "LDA printing topics",
+  "metadata": {
+    "code": [
+      "vectorizer = TfidfVectorizer().fit(data['clean_text'])",
+      "data_vectorized = vectorizer.transform(data['clean_text'])",
+      "lda_model = LatentDirichletAllocation(n_components=2).fit(data_vectorized)",
+      "",
+      "def print_topics(model, vectorizer):",
+      "    for idx, topic in enumerate(model.components_):",
+      "        print(\"Topic %d:\" % (idx))",
+      "        print([(vectorizer.get_feature_names()[i], topic[i])",
+      "                        for i in topic.argsort()[:-10 - 1:-1]])",
+      "        ",
+      "",
+      "print_topics(lda_model, vectorizer)"
+    ],
+    "language": "Python",
+    "tags": [
+      "LDA",
+      "print"
+    ]
+  },
+  "schema_name": "code-snippet"
+}

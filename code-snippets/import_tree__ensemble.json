@@ -1,0 +1,24 @@
+{
+  "display_name": "Import Tree & Ensemble",
+  "metadata": {
+    "code": [
+      "from sklearn.tree import DecisionTreeRegressor",
+      "from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor",
+      "from sklearn.ensemble import StackingRegressor",
+      "",
+      "ensemble = StackingRegressor(",
+      "    estimators = [(\"model1\", ()),",
+      "                  (\"model2\", ()",
+      "                  )],",
+      "    final_estimator = model3"
+    ],
+    "tags": [
+      "import",
+      "tree",
+      "ensemble",
+      "boosting"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

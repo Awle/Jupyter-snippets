@@ -1,0 +1,18 @@
+{
+  "display_name": "Always import",
+  "metadata": {
+    "code": [
+      "import pandas as pd",
+      "import numpy as np",
+      "import seaborn as sns",
+      "import matplotlib.pyplot as plt"
+    ],
+    "description": "import always used ML packages",
+    "tags": [
+      "import",
+      "global"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

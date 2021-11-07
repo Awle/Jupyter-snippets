@@ -1,0 +1,25 @@
+{
+  "display_name": "Learning curves",
+  "metadata": {
+    "code": [
+      "from sklearn.model_selection import learning_curve",
+      "",
+      "train_sizes = [25,50,75,100,250,500,750,1000,1150]",
+      "",
+      "train_sizes, train_scores, test_scores = learning_curve(",
+      "    estimator=LinearRegression(), X=X, y=y, train_sizes=train_sizes, cv=5)",
+      "",
+      "train_scores = np.mean(train_scores, axis=1)",
+      "test_scores = np.mean(test_scores, axis=1)",
+      "",
+      "plt.plot(train_sizes,train_scores)",
+      "plt.plot(train_sizes,test_scores)"
+    ],
+    "language": "Python",
+    "tags": [
+      "model selection",
+      "import"
+    ]
+  },
+  "schema_name": "code-snippet"
+}

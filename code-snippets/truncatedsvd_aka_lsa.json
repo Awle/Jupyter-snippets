@@ -1,0 +1,22 @@
+{
+  "display_name": "TruncatedSVD aka LSA",
+  "metadata": {
+    "code": [
+      "from sklearn.decomposition import TruncatedSVD",
+      "",
+      "model = TruncatedSVD()",
+      "",
+      "#Fit and transform then plot",
+      "model.fit_transform()",
+      "plt.plot(svd.explained_variance_ratio_.cumsum())",
+      "plt.xlabel('Principal Component'); plt.ylabel('% explained variance');"
+    ],
+    "tags": [
+      "truncatedSVD",
+      "dimensionality reduction",
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

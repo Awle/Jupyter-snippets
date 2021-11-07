@@ -1,0 +1,37 @@
+{
+  "display_name": "Import Preprocessing",
+  "metadata": {
+    "code": [
+      "from sklearn.preprocessing import RobustScaler, MinMaxScaler, StandardScaler, OneHotEncoder, LabelEncoder, OrdinalEncoder, FunctionTransformer",
+      "from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer",
+      "",
+      "#Ex FunctionTransformer",
+      "new_column = FunctionTransformer(lambda data: pd.DataFrame(data.product_length_cm*data.product_height_cm*data.product_width_cm))",
+      "",
+      "#Greater than 30% of values missing: Potentially drop feature or row",
+      "#Less than 30% of values missing: impute a value that makes sense e.g. Median, mean, mode.",
+      "",
+      "#StandardnScaler:",
+      "#Most efficient when data is normally distributed",
+      "#Does not ensure an exact common range",
+      "#Sensitive to outliers",
+      "#Can distort relative distances between feature values",
+      "",
+      "#MinMax Scaling",
+      "#Ensures a fixed range, important with distance based algorithms like the K-Nearest Neighbours (cf. Performance Metrics lecture!)",
+      "#Efficient regardless of distribution",
+      "#Doesn't reduce the affect of outliers",
+      "#Doesn't correct the skewness of a distribution",
+      "",
+      "#Robust Scaling",
+      "#Uses central tendency metrics that are less sensitive to outliers.",
+      "",
+      ""
+    ],
+    "tags": [
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

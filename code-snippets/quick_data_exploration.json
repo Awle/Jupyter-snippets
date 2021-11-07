@@ -1,0 +1,44 @@
+{
+  "display_name": "Feature Selection - Quick Data Exploration",
+  "metadata": {
+    "code": [
+      "from sklearn.inspection import permutation_importance",
+      "",
+      "#Check correlations ",
+      "plt.figure()",
+      "sns.pairplot(data=data);",
+      "",
+      "corr = data.corr()",
+      "sns.heatmap(corr,cmap='coolwarm');",
+      "",
+      "corr_df = corr.unstack().reset_index() # Unstack correlation matrix ",
+      "corr_df.columns = ['feature_1','feature_2', 'correlation'] # rename columns",
+      "corr_df.sort_values(by=\"correlation\",ascending=False, inplace=True) # sort by correlation",
+      "corr_df = corr_df[corr_df['feature_1'] != corr_df['feature_2']] # Remove self correlation",
+      "corr_df",
+      "",
+      "#Check data distributions",
+      "for col in data.select_types(include=['int64','float64','object']).columns:",
+      "    plt.figure()",
+      "    sns.boxplot(df[[col]])",
+      "    sns.histplot(df[[col]])",
+      "    ",
+      "    ",
+      "#Check best features",
+      "model = ().fit(X, y) # Fit model",
+      "permutation_score = permutation_importance(model, X, y, n_repeats=10) # Perform Permutation",
+      "importance_df = pd.DataFrame(np.vstack((X.columns,permutation_score.importances_mean)).T) # Unstack results",
+      "importance_df.columns=['feature','score decrease']",
+      "importance_df.sort_values(by=\"score decrease\", ascending = False)",
+      "importance_df.head()"
+    ],
+    "tags": [
+      "plot",
+      "exploratory",
+      "feature",
+      "selection"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

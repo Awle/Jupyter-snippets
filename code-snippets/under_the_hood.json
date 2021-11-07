@@ -1,0 +1,18 @@
+{
+  "display_name": "Under The Hood",
+  "metadata": {
+    "code": [
+      "from IPython.display import Image ",
+      "import os",
+      "",
+      "path = os.path.abspath(\"Pictures/UnderTheHood.png\")",
+      "",
+      "Image(f\"{path}\")"
+    ],
+    "language": "Python",
+    "tags": [
+      "question"
+    ]
+  },
+  "schema_name": "code-snippet"
+}
