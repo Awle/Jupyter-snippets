@@ -1,0 +1,24 @@
+{
+  "display_name": "Threshold",
+  "metadata": {
+    "code": [
+      "from sklearn.metrics import precision_recall_curve",
+      "",
+      "y_pred = cross_val_predict(model,X,y,cv=5,method='predict') #Check if predict_proba",
+      "precision, recall, threshold = precision_recall_curve(y,y_pred)",
+      "threshold_df = pd.DataFrame((precision,recall, threshold), index=['precision','recall','threshold']).T",
+      "",
+      "def custom_predict(X, custom_threshold):",
+      "probs = model.predict_proba(X) # Get likelihood of each sample being classified as 0 or 1",
+      "expensive_probs = probs[:,1] # Only keep expensive likelihoods (1)",
+      "return (expensive_probs > custom_threshold).astype(int) # Boolean outcome converted to 0 or 1"
+    ],
+    "language": "Python",
+    "tags": [
+      "threshold",
+      "classification",
+      "import"
+    ]
+  },
+  "schema_name": "code-snippet"
+}

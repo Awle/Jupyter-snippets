@@ -1,0 +1,15 @@
+{
+  "display_name": "Read from csv",
+  "metadata": {
+    "code": [
+      "data_original = pd.read_csv()",
+      "data = data_original.copy()",
+      "data.head()"
+    ],
+    "tags": [
+      "Read file"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

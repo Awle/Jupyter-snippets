@@ -1,0 +1,17 @@
+{
+  "display_name": "Cross Validation",
+  "metadata": {
+    "code": [
+      "from sklearn.model_selection import cross_validate",
+      "from sklearn.model_selection import cross_val_predict",
+      "",
+      "cv_results = cross_validate(pipe, X, y, scoring='r2', cv=5)",
+      "cv_results['test_score'].mean()"
+    ],
+    "tags": [
+      "cross validation"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

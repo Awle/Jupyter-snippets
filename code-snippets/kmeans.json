@@ -1,0 +1,25 @@
+{
+  "display_name": "KMeans",
+  "metadata": {
+    "code": [
+      "from sklearn.cluster import KMeans",
+      "",
+      "#Plot to see the elbow",
+      "inertias = []",
+      "ks = range(1,10)",
+      "for k in ks:",
+      "    km_test = KMeans(n_clusters=k).fit(X)",
+      "    inertias.append(km_test.inertia_)",
+      "plt.plot(ks, inertias)",
+      "plt.xlabel('k cluster number')"
+    ],
+    "tags": [
+      "ML",
+      "KMeans",
+      "unsupervised",
+      "clustering"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

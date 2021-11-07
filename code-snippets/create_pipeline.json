@@ -1,0 +1,29 @@
+{
+  "display_name": "Create Pipeline",
+  "metadata": {
+    "code": [
+      "from sklearn import set_config; set_config(display='diagram')",
+      "from sklearn.pipeline import Pipeline",
+      "from sklearn.compose import ColumnTransformer, make_column_selector",
+      "",
+      "pipe = Pipeline([",
+      "    ('imputer', ),",
+      "    ('scaler', ),",
+      "    ('model', )",
+      "])",
+      "",
+      "preprocessor = ColumnTransformer([",
+      "    ('num_transformer', pipe1, make_column_selector(dtype_include=['int64'])),",
+      "    ('cat_transformer', pipe2, make_column_selector(dtype_include=['object']))],",
+      "    remainder='passthrough') #Keep all data",
+      "",
+      ""
+    ],
+    "tags": [
+      "pipeline",
+      "ML"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

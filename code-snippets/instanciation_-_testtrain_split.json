@@ -1,0 +1,32 @@
+{
+  "display_name": "Instanciation - test/train split",
+  "metadata": {
+    "code": [
+      "from sklearn.model_selection import train_test_split",
+      "",
+      "features = ['',]",
+      "target = ''",
+      "",
+      "# Ready y",
+      "y = data[target]",
+      "",
+      "# Ready X and y",
+      "X = data.drop(columns=target)",
+      "#OR",
+      "X = data[features]",
+      "",
+      "",
+      "# Split into Train/Test",
+      "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)"
+    ],
+    "tags": [
+      "test",
+      "train",
+      "split",
+      "import",
+      "supervised"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

@@ -1,0 +1,34 @@
+{
+  "display_name": "PCA",
+  "metadata": {
+    "code": [
+      "from sklearn.decomposition import PCA",
+      "",
+      "#Plot to see the elbow",
+      "plt.plot(np.cumsum(pca.explained_variance_ratio_))",
+      "",
+      "#Plot the vector",
+      "def draw_vector(v0, v1, ax=None):",
+      "    '''",
+      "    Plot 2 vectors in the same ax",
+      "    '''",
+      "    ax = ax or plt.gca()",
+      "    arrowprops=dict(arrowstyle='->', color='red', linewidth=2)",
+      "    ax.annotate('', v1, v0, arrowprops=arrowprops)",
+      "    ",
+      "plt.figure(figsize=(5,5))",
+      "plt.scatter(X[:, 0], X[:, 1])",
+      "for (length, vector) in zip(pca.explained_variance_, pca.components_):",
+      "    v = vector * np.sqrt(length) # Visualize the square root of their lenghts, in order to compare same \"units\" (sqrt(Var)=std)",
+      "    draw_vector(pca.mean_, pca.mean_ + v)",
+      "",
+      "plt.xlim(xmin=-1.5, xmax=1.5); plt.ylim(ymin=-1.5, ymax=1.5)"
+    ],
+    "tags": [
+      "dimensionality reduction",
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

@@ -1,0 +1,42 @@
+{
+  "display_name": "NLP preprocessing functions",
+  "metadata": {
+    "code": [
+      "def remove_punctuation(sentence:str):",
+      "    for punctuation in string.punctuation:",
+      "        sentence = sentence.replace(punctuation, '') ",
+      "    return sentence",
+      "",
+      "def lower_text(sentence:str):",
+      "    return sentence.lower()",
+      "",
+      "def remove_numbers(sentence:str):",
+      "    return ''.join(word for word in sentence if not word.isdigit())",
+      "",
+      "def remove_stopwords(sentence:str):   ",
+      "    stop_words = set(stopwords.words('english')) ",
+      "    word_tokens = word_tokenize(sentence)  ",
+      "    return ' '.join([w for w in word_tokens if not w in stop_words])",
+      "",
+      "def lemmatize(sentence:str):",
+      "    lemmatizer = WordNetLemmatizer()",
+      "    sentence = sentence.split()",
+      "    lemmatized = ' '.join([lemmatizer.lemmatize(word) for word in sentence])",
+      "    result = lemmatized",
+      "    return result",
+      "",
+      "data['clean_text'] = data['review_comment_message'].apply(remove_punctuation)",
+      "data['clean_text'] = data['clean_text'].apply(lower_text)",
+      "data['clean_text'] = data['clean_text'].apply(remove_numbers)",
+      "data['clean_text'] = data['clean_text'].apply(remove_stopwords)",
+      "data['clean_text'] = data['clean_text'].apply(lemmatize)"
+    ],
+    "tags": [
+      "NLP",
+      "preprocessing",
+      "functions"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

@@ -1,0 +1,40 @@
+{
+  "display_name": "Import Classifier",
+  "metadata": {
+    "code": [
+      "from sklearn.linear_model import LogisticRegression, SGDClassifier",
+      "from sklearn.neighbors import KNeighborsClassifier",
+      "from sklearn.svm import SVC",
+      "",
+      "#Careful of the balance of each class in the dataset",
+      "#Will tend to predict under represented class poorly",
+      "#~30:70 split for binary classification would be considered imbalanced",
+      "#Balancing strategies:",
+      "#Over-sampling of minority class",
+      "#Under-sampling of majority class",
+      "#Computation of new minority class instances",
+      "",
+      "##SGD",
+      "",
+      "#Pros",
+      "#SGD is faster for very large datasets",
+      "#Jumps out of local minima!",
+      "#Allows to reduce RAM load (see deep learning)",
+      "",
+      "#Cons",
+      "#Need more epochs",
+      "#Never exactly converges (careful when to stop?)",
+      "#Maybe slower for small n dataset with many features p",
+      "",
+      "#\ud83d\udc49 Use when",
+      "#Your dataset has 6 digits or more # of observations"
+    ],
+    "tags": [
+      "import",
+      "ML",
+      "Classifier"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}
