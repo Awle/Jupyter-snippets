@@ -1,10 +1,11 @@
 # Jupyter-snippets
 
 ## Prerequisite:
-
 - NodeJS 12+
 
 - Python 3.6+
+
+- Jupyter Lab
 
 - Elyra code-snippet-extension in Jupyter Lab
 
