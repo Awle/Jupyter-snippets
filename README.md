@@ -18,3 +18,8 @@ $JUPYTER_DATA_DIR/metadata/code-snippets
 ## You can find your path using:
 
 $ jupyter --data-dir
+
+## You can also use this command:
+Do not forget to replace the 2 usr by your own user name!
+
+cp -r  /home/usr/Jupyter-snippets /home/usr/.local/share/jupyter/metadata/code-snippets 
