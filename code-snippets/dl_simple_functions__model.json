@@ -1,0 +1,50 @@
+{
+  "display_name": "DL model",
+  "metadata": {
+    "code": [
+      "reg_l2 = regularizers.L2(0.01)",
+      "",
+      "#All type of layers, pick and choose the ones you want!",
+      "",
+      "def initialize_model():",
+      "    ### Model architecture",
+      "    model = models.Sequential()",
+      "    model.add(layers.Embedding(input_dim=vocab_size +1,output_dim=embedding space dimension))",
+      "    model.add(Masking(mask_value=-666, input_shape=(187,1)))",
+      "    model.add(layers.Conv1D(50,(1,))) #NLP with CNN",
+      "    model.add(layers.Conv2D(8, (4,4), input_shape=(28, 28, 1), padding='same', activation=\"relu\"))",
+      "    model.add(layers.MaxPool2D(pool_size=(2,2))) ",
+      "    model.add(layers.Dense(50, activation='relu', input_dim=30)) ",
+      "    model.add(layers.Dropout(rate=0.3))",
+      "    model.add(layers.Dense(50, activation='relu', kernel_regularizer=reg_l2))",
+      "    model.add(layers.Flatten())",
+      "    model.add(layers.Dense(1, activation='sigmoid')) ",
+      "    ",
+      "    ### Model optimization : Optimizer, loss and metric ",
+      "    model.compile(loss='binary_crossentropy', ",
+      "                  optimizer='adam', ",
+      "                  metrics=['Precision','Recall'])",
+      "    ",
+      "    return model ",
+      "",
+      "es = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)",
+      "model = initialize_model()",
+      "history = model.fit(X_train, y_train,",
+      "                    validation_data=(X_val, y_val),",
+      "                    epochs=100,",
+      "                    batch_size=16,",
+      "                    verbose=0,",
+      "                    callbacks=[es])",
+      "",
+      "plot_history(history)",
+      "plot_loss_accuracy(history)"
+    ],
+    "tags": [
+      "DL",
+      "functions",
+      "init"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

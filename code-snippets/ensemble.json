@@ -1,0 +1,20 @@
+{
+  "display_name": "Ensemble",
+  "metadata": {
+    "code": [
+      "from sklearn.ensemble import StackingRegressor",
+      "",
+      "ensemble = StackingRegressor(",
+      "    estimators = [(\"model1\", ()),",
+      "                  (\"model2\", ()",
+      "                  )],",
+      "    final_estimator = model3"
+    ],
+    "tags": [
+      "ensemble",
+      "import"
+    ],
+    "language": "Python"
+  },
+  "schema_name": "code-snippet"
+}

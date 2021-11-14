@@ -5,12 +5,13 @@
       "from IPython.display import Image ",
       "import os",
       "",
-      "path = os.path.abspath(\"Pictures/CLT.png\")",
+      "path = '/home/awle/Jupyter-snippets/Pictures/CLT.png'",
       "",
       "Image(f\"{path}\")"
     ],
     "language": "Python",
     "tags": [
+      "image",
       "question"
     ]
   },
